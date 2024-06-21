@@ -157,19 +157,20 @@ if __name__ == "__main__":
         logger.info("=" * 50)
         logger.info("summary: ")
         has_error_prefix = "[ERROR] " if len(ERROR_MSGS) > 0 else ""
+        repo_prefix = "AutoScore: "
         if all_tasks_success:
             if num_newly_downloads > 0:
-                subject = f"{has_error_prefix}Successfully downloading sheets."
+                subject = f"{repo_prefix}{has_error_prefix}Successfully downloading sheets."
                 content = "Success downloading the following sheet(s):\n{}".format('\n'.join([title for title in titles_newly_download]))
                 logger.info("All sheets start to download successfully.")
 
             else:   # nothing new
-                subject = f"{has_error_prefix}There's no new sheet updated."
+                subject = f"{repo_prefix}{has_error_prefix}There's no new sheet updated."
                 content = "There's no new sheet!"
                 logger.info("There's no new sheet")
 
         else:   # download error
-            subject = f"{has_error_prefix}Failed to download all sheets."
+            subject = f"{repo_prefix}{has_error_prefix}Failed to download all sheets."
             content = "Failed..."
             collect_errors("Failed to download all sheets.")
 
