@@ -40,7 +40,7 @@ wget https://github.com/Freddd13/auto-Halcyon/blob/main/localconfig.yaml?raw=tru
 3. Download image and run:
 ```
 docker pull fredyu13/auto-halcyon
-docker run -d --name auto-halcyon -v $(pwd)/.localconfig.yaml:/app/.localconfig.yaml fredyu13/auto-halcyon
+docker run -d --name auto-halcyon -v $(pwd)/.localconfig.yaml:/app/.localconfig.yaml fredyu13/auto-halcyon:latest
 ```
 
 ### User config
