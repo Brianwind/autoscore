@@ -5,3 +5,4 @@ msal
 tqdm
 pyyaml
 microsoftgraph-python
+colorlog
