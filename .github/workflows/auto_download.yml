@@ -56,7 +56,7 @@ jobs:
         # GITHUB_OWNER_REPO: ${{ github.repository }}
         # LAST_SUCCESS_VIDEO_TIME: ${{ vars.LAST_SUCCESS_VIDEO_TIME }}
 
-        IGNORE_HISTORY_DOWNLOAD: 1
+        IGNORE_HISTORY_DOWNLOAD: 0
 
       run: python main.py
 
